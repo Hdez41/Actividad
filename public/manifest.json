@@ -1,0 +1,112 @@
+{
+  "id": "Metrowest1",
+  "scope": "/Service/",
+  "name": "Metrowest Service",
+  "display_override": [
+    "window-controls-overlay",
+    "minimal-ui"
+  ],
+  "display": "standalone",
+  "start_url": "/Service/",
+  "short_name": "Service",
+  "theme_color": "#04416c",
+  "description": "Esta aplicacion le presenta el plan de emergencias y algunas herramientas para el servicio.",
+  "orientation": "any",
+  "background_color": "#5a92b9",
+  "related_applications": [],
+  "dir": "ltr",
+  "lang": "en",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "assets/icons/Monochrome_icon (1).png",
+      "sizes": "640x635",
+      "type": "image/png",
+      "purpose": "monochrome"
+    },
+    {
+      "src": "assets/icons/maskable_icon_x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/icons/maskable_icon_x512.png",
+      "sizes": "512x512",
+      "type": "maskable",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/maskable_icon_x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/screenshots/s1.webp",
+      "sizes": "800x1280",
+      "type": "image/webp"
+    },
+    {
+      "src": "assets/screenshots/s2.webp",
+      "sizes": "800x1280",
+      "type": "image/webp"
+    },
+    {
+      "src": "assets/screenshots/s3.webp",
+      "sizes": "800x1280",
+      "type": "image/webp"
+    },
+    {
+      "src": "assets/screenshots/s4.webp",
+      "sizes": "800x1280",
+      "type": "image/webp"
+    },
+    {
+      "src": "assets/screenshots/s5.webp",
+      "sizes": "800x1280",
+      "type": "image/webp"
+    }
+  ],
+  "features": [
+    "Cross Platform",
+    "fast",
+    "simple"
+  ],
+  "categories": [
+    "education",
+    "security"
+
+  ],
+  "share_target": {
+    "action": "decision.php",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "Metrowest Service",
+      "text": "Esta aplicacion le presenta el plan de emergencias y algunas herramientas para el servicio.",
+      "url": "https://metrowest.github.io/Service/",
+      "files": [
+        {
+          "name": "Metrowest Service",
+          "accept": [
+            ".html",
+            ".mhtml",
+            ".htm"
+          ]
+        }
+      ]
+    }
+  }
+}
