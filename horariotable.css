@@ -1,0 +1,147 @@
+.containerh {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 900px;
+  line-height: 1.3;
+  background-color: #ffebd3;
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tbody1,
+td {
+  padding: 2px 20px;
+  color: white;
+  margin: 10px 0;
+  border: solid 1px #fff;
+  min-width: 50px;
+  max-width: 65px;
+  text-align: center;
+}
+
+#a2 {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: #03549a;
+  border-radius: 15px;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  align-items: center;
+}
+
+#a2:hover {
+  background-color: transparent;
+  color: #ffffff;
+  background: #000000;
+}
+
+.g3 {
+  height: 40px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.header2 {
+  text-align: center;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  line-height: 1.3;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 1.7;
+}
+
+.header2 {
+  text-align: center;
+  color: white;
+  background: #03468c;
+
+}
+
+.header2 a {
+  display: block;
+  font-size: 48px;
+  text-decoration: none;
+  color: white;
+
+}
+
+.header2 p {
+  margin: 10px 0 40px 0;
+  font-size: 18px;
+}
+
+#nombre {
+  font-size: 30px;
+  background-color: #95fefe;
+  border-radius: 5px;
+  max-width: 100%;
+  position: relative;
+  display: flex;
+  text-align: center;
+  border: none;
+  border-bottom-color: currentcolor;
+  border-bottom-style: none;
+  border-bottom-width: medium;
+  border-bottom: 2px solid #005691;
+  margin-top: 20px;
+}
+
+.formulario__submit3 {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: #03549a;
+  border-radius: 15px;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+  align-items: center;
+}
+
+.selecth {
+    background-color: #95fefe;
+    color: rgb(0, 0, 0);
+}
+
+.selecth {
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+    outline: 0;
+    transition: .3s;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    border-bottom: 2px solid #000000;
+    height: 30px;
+  }
+
+  @media screen {
+    p {color: blue;}
+}
+@media print {
+    p {color: black;}
+ }

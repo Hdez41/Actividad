@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Metrowest Service</title>
+
+  <!-- This meta viewport ensures the webpage's dimensions change according to the device it's on. This is called Responsive Web Design.-->
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0" />
+  <meta name="description" content="This is a Service app" />
+
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#04416c" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#5a92b9" />
+
+  <!-- Facebook metadata -->
+  <meta property="og:image:width" content="279">
+  <meta property="og:image:height" content="279">
+  <meta property="og:description"
+    content="Esta aplicacion le presenta el plan de emergencias y algunas herramientas para el servicio.">
+  <meta property="og:title" content="Metrowest Service">
+  <meta property="og:image"
+    content="https://github.com/Metrowest/Service/blob/main/public/assets/icons/og-image.jpg?raw=true/og-image.jpg">
+  <meta property="og:url" content="https://metrowest.github.io/Service/">
+
+  <!-- Boxicons CDN Link Nav var pequwno-->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- These meta tags are Apple-specific, and set the web application to run in full-screen mode with a black status bar. Learn more at https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Guide" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <!-- Imports an icon to represent the document. -->
+  <link rel="apple-touch-icon" sizes="180x180" href="public/assets/icons/180.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="public/assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="public/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="public/assets/icons/favicon-16x16.png">
+  <link rel="mask-icon" href="public/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+
+  <meta name="msapplication-config" content="public/assets/icons/browserconfig.xml" />
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="public/assets/icons/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Imports the manifest to represent the web application. A web app must have a manifest to be a PWA. -->
+  <link rel="manifest" href="public/manifest.json" />
+
+  <!--Popup Google Fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+
+  <!-- light mode and dark mode CSS -->
+  <link rel="stylesheet" media="(prefers-color-scheme:light)"
+    href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.73/dist/themes/light.css">
+  <link rel="stylesheet" media="(prefers-color-scheme:dark)"
+    href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.73/dist/themes/dark.css"
+    onload="document.documentElement.classList.add('sl-theme-dark');">
+
+  <!-- required -->
+  <link rel="stylesheet" type="text/css" media="all" href="src/styles/stellarnav.css">
+  <link rel="stylesheet" type="text/css" media="all" href="src/styles/appstyle.css">
+  <link rel="stylesheet" type="text/css" media="all" href="src/styles/pupupprec.css">
+  <!-- required -->
+
+  <!--SW-->
+  <script>
+    if (navigator.serviceWorker) {
+      navigator.serviceWorker.register(
+        '/Service/sw.js',
+        { scope: '/Service/' }
+      )
+    }
+  </script>
+
+  <!-- Top arow CDN Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <!-- Top arow CDN Link -->
+
+</head>
+
+<body>
+  <!-- Our app-index web component. This component is defined in src/pages/app-index.ts-->
+
+  <!-- .stellarnav -->
+  <div class="stellarnav">
+    <ul>
+      <li><a href="index.html"><i><img title="casa1" class="img6" src="public/assets/img/casa1.webp"></i>Home</a>
+      </li>
+
+      <li>
+        <a href="desastre.html">
+          <i><img title="explorer" class="img6" src="public/assets/img/tormenta1.webp"></i>
+          Plan Ante Un<br>Desastre Natural
+        </a>
+      </li>
+      <li><a><i><img title="predicacion" class="img6 js-arrow" src="public/assets/img/precursor4.webp"></i>Predicación<i
+            class="fa fa-angle-down"></i></a>
+        <ul>
+          <li>
+            <a href="territorios.html">
+              <i><img title="explorer" class="img6" src="public/assets/img/territorio1.webp"></i>
+              Territorios
+            </a>
+          </li>
+          <li>
+            <a href="interes.html">
+              <i><img title="android" class="img6" src="public/assets/img/precursor1.webp"></i>
+              Interesados
+            </a>
+          </li>
+          <li>
+            <a href="precursorado.html">
+              <i><img title="apple" class="img6" src="public/assets/img/precursor4.webp"></i>
+              Precursorado
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!--<li><a><i><img title="eventos" class="img6 js-arrow" src="public/assets/img/familia4.webp"></i>Eventos<i
+            class="fa fa-angle-down"></i></a>
+        <ul>
+          <li><a href="conmemoracion.html"><i><img title="casa1" class="img6"
+                  src="public/assets/img/bg.webp"></i>Conmemoración</a>
+          </li>
+          <li>
+            <a href="circuito1.html">
+              <i><img title="android" class="img6" src="public/assets/img/asamblea1.webp"></i>
+              Asamblea de circuito<br> 16 de Septiembre 2023
+            </a>
+          </li>
+          <li>
+            <a href="circuito2.html">
+              <i><img title="apple" class="img6" src="public/assets/img/asamblea1.webp"></i>
+              Asamblea de circuito<br> 14 de Enero 2024
+            </a>
+          </li>
+          <li>
+            <a href="regional.html">
+              <i><img title="apple" class="img6" src="public/assets/img/asamblea3.webp"></i>
+              Asamblea Regional<br> 28 - 30 de julio de 2023
+            </a>
+          </li>
+          <li>
+            <a href="campana.html">
+              <i><img title="apple" class="img6" src="public/assets/img/precursor4.webp"></i>
+              Campaña <br> Mundial
+            </a>
+          </li>
+        </ul>
+      </li>-->
+      <li><a><i><img title="recursos" class="img6 js-arrow" src="public/assets/img/recurso.webp"></i>Recursos<i
+            class="fa fa-angle-down"></i></a>
+        <ul>
+          <li>
+            <a href="recursos.html">
+              <i><img title="explorer" class="img6" src="public/assets/img/explorer.webp"></i>
+              Instalación En Windows
+            </a>
+          </li>
+          <li>
+            <a href="recursos.html#android">
+              <i><img title="android" class="img6" src="public/assets/img/android.webp"></i>
+              Instalación En Androide
+            </a>
+          </li>
+          <li>
+            <a href="recursos.html#iphone">
+              <i><img title="apple" class="img6" src="public/assets/img/apple.webp"></i>
+              Instalación En iPhone
+            </a>
+          </li>
+          <li>
+            <a href="recursos.html#territorios">
+              <i><img title="territorio2" class="img6" src="public/assets/img/territorio2.webp"></i>
+              Accede A Los Territorios
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="iniciar.html"><i><img title="visita" class="img6"
+              src="public/assets/img/a&m.webp"></i>Nombrados<br>Iniciar
+          Sección</a>
+      </li>
+    </ul>
+  </div>
+  <!-- .stellarnav -->
+
+  <!-- .stellarnav header-->
+  <div class="header">
+    <a href="#">Metrowest Service </a>
+    <h1>Trabajando Unidos Como Congregación</h1>
+    <img title="logolarge" src="public/assets/img/logolarge.webp" class="imgLogo2" />
+    <h3> Cuando ya le pesaban las manos a Moisés... Aarón y Hur se colocaron uno a cada lado para
+      sostenerle las manos (Éxodo 17:12).<br>
+    </h3>
+  </div>
+  <!-- .stellarnav header-->
+
+  <!--body original-->
+  <section class="container">
+    <h2 class="section-header" id="section-header">
+      <i><img title="header1" class="img4" src="public/assets/img/header1.webp"></i>METROWEST SERVICE<i>
+        <img title="header2" class="img4" src="public/assets/img/header2.webp">
+      </i>
+    </h2>
+    <div class="containera">
+      <img title="logolarge" src="public/assets/img/precursor4.webp" class="imgLogo2" />
+      <h3>“Haz la obra de evangelizador, efectúa tu ministerio plenamente.”<a
+          href="https://wol.jw.org/es/wol/b/r4/lp-s/nwtsty/55/4#v=55:4:5" target="_blank">(2 TIM. 4:5)</a>.
+      </h3>
+    </div>
+    <div class="popup">
+      <button id="close">&times;</button>
+      <h2>¡Auxiliar con 15 o 30 horas!</h2><br>
+      <h4>
+        Una excelente oportunidad para ampliar nuestro servicio a Jehová.
+      </h4>
+      <p>
+        ¡Hagamos planes con la familia¡ “Nada me da más alegría que oír que mis hijos siguen andando en la verdad”
+        <a id="a3" href="https://wol.jw.org/es/wol/l/r4/lp-s?q=3+Juan+4" target="_blank">(3 Juan 4)
+        </a>.
+      </p>
+      <p>
+        Sirvamos juntos como precursores auxiliares.
+        Con solo 15 o 30 horas podemos completar el requisito de horas.
+      </p>
+      <div class="button" id="popup button">
+        <a href="precursorado.html" id="a1">Aplique ahora</a>
+      </div>
+    </div>
+    <div class="content1">
+      <p>
+        Metrowest Service no sustituye el sitio oficial de la Organización
+        Cristiana de los Testigos de Jehová, jw.org ni la aplicación JW Library.
+        Tampoco sustituye la aplicación NW JWS, que se utiliza para enviar los informes y publicar los anuncios,
+        eventos,
+        programas de las reuniones de la congregación.
+      </p>
+      <p>
+        Este sitio se ha preparado con la intención de facilitar a los hermanos de la congregación Metrowest Spanish
+        las siguientes herramientas:<br><br>
+      </p>
+      <div class="content3">
+        1. <a href="desastre.html"><i><img title="tormenta1" class="img6" src="public/assets/img/tormenta1.webp">
+          </i></a>
+        <p-5>
+          Plan de emergencia: plan ante una emergencia natural, incluye:
+        </p-5>
+      </div>
+      <p-5>
+        • Responsabilidades<br>
+      </p-5>
+      <p-5>
+        • Plan aprobado por el cuerpo<br>
+      </p-5>
+      <p-5>
+        • Vigilancia ante huracán<br>
+      </p-5>
+      <p-5>
+        • Aviso de huracán<br>
+      </p-5>
+      <p-5>
+        • Después del huracán<br>
+      </p-5>
+      <p-5>
+        • Pasos por seguir <br>
+      </p-5>
+      <p-5>
+        • Textos para el pastoreo<br>
+      </p-5>
+      <p-5>
+        • Preparación<br>
+      </p-5>
+      <div class="content3">
+        2. <a href="territorios.html"><i><img title="territorio1" class="img6" src="public/assets/img/territorio1.webp">
+          </i></a>
+        <p-5>
+          Territorios: acceso directo a los territorios para el servicio (requiere autorización).<br><br>
+        </p-5>
+      </div>
+      <div class="content3">
+        3. <a href="interes.html"><i><img title="precursor1" class="img6" src="public/assets/img/precursor1.webp">
+          </i></a>
+        <p-5>
+          Interesados: forma para informar personas que muestren interés y hablen otro idioma o no sean
+          de nuestro territorio.<br><br>
+        </p-5>
+      </div>
+      <div class="content3">
+        4. <a href="precursorado.html"><i><img title="precursor" class="img6" src="public/assets/img/precursor.webp">
+          </i></a>
+        <p-5>
+          Precursorado auxiliar: forma para solicitar el precursorado auxiliar. <br><br>
+        </p-5>
+      </div>
+      <P1 id="condiciones"></P1>
+      <div class="content3">
+        5. <i><img title="recurso" class="img6" src="public/assets/img/familia4.webp">
+        </i>
+        <p-5>
+          Eventos: incluye fechas de campañas, asambleas, la conmemoración etc...<br><br>
+        </p-5>
+      </div>
+      <div class="content3">
+        6. <a href="recursos.html"><i><img title="recurso" class="img6" src="public/assets/img/recurso.webp">
+          </i></a>
+        <p-5>
+          Recursos: instrucciones y dirección para utilizar algunas de las funciones y herramientas incluye imágenes y
+          videos). <br><br>
+        </p-5>
+      </div>
+      <div class="content3">
+        7. <i><img title="recurso" class="img6" src="public/assets/img/a&m.webp">
+        </i>
+        <p-5>
+          Nombrados: el acceso a esta sección se ha limitado solo para los ancianos y
+          siervos ministeriales (requiere autorización).<br><br>
+        </p-5>
+      </div>
+    </div>
+    <h2 class="section-header" id="section-header">
+      <i><img title="header1" class="img4" src="public/assets/img/header1.webp"></i>CONDICIONES DE USO<i>
+        <img title="header2" class="img4" src="public/assets/img/header2.webp">
+      </i>
+    </h2>
+
+    <img title="condiciones" src="public/assets/img/condiciones.webp" class="imgLogo" />
+
+    <div class="content1">
+      <h3>El uso de este Web App está regido por las presentes condiciones.</h3>
+      <p>
+        Al usar este sitio, usted se compromete a cumplir todas estas condiciones establecidas en este
+        formato digital.<br>
+        <br> No debe utilizar este sitio si no está dispuesto a cumplir estas condiciones en su totalidad o
+        en parte.<br>
+        <br> El enlace e información contenida es para uso único y exclusivo de los miembros de la
+        congregación Metrowest.<br>
+        <br>La información contenida no se debe postear en las redes sociales ni adelantar a menos que
+        tengan permiso del Cuerpo de Ancianos.
+      </p>
+
+      <h3>Lo siguiente está prohibido: </h3>
+      <p>
+        Publicar material gráfico, publicaciones electrónicas, artículos de este medio digital de anuncios en
+        cualquier sitio web, sitio de intercambio de archivos, sitio de intercambio de vídeo o red social.
+        <br>
+      </p>
+    </div>
+
+    <div class="containera">
+      <h3>Cuerpo de ancianos, trabajando unidos por amor a Jehová para la congregación.</h3>
+      <img title="logo" src="public/assets/icons/logo.webp" class="img8" />
+    </div>
+    <div class="formulario__parrafo">
+      <h3>Gracias por aprovechar este medio digital de comunicación.</h3>
+    </div>
+
+    <div class="button">
+      <a href="#top"><i class="fas fa-arrow-up"></i></a>
+    </div>
+  </section>
+
+  <!--Script-->
+  <script type="text/javascript">
+    window.addEventListener("load", function () {
+      setTimeout(
+        function open(event) {
+          document.querySelector(".popup").style.display = "block";
+        },
+        2000
+      )
+    });
+    document.querySelector("#close").addEventListener("click", function () {
+      document.querySelector(".popup").style.display = "none";
+    });
+  </script>
+
+  <!-- required stellarnav-->
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script type="text/javascript" src="public/stellarnav.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+      jQuery('.stellarnav').stellarNav({
+        theme: 'dark',
+        breakpoint: 960,
+        position: 'right',
+      });
+    });
+  </script>
+  <!-- required stellarnav-->
+
+  <script src="https://code.jquery.com/jquery-migrate-3.0.1.js"></script>
+
+  <!-- Memanggil scripts-->
+  <script type="text/javascript"></script>
+
+
+
+</body>
+
+</html>
